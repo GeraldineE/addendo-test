@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "e1b97442-de29-46ec-a145-9ed37b3fdfd8",
+		"name": "Addendo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve Organizations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/org/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"org",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Organization",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Addendo\",\n    \"description\": \"Addendo prueba\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/org/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"org",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Organization",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/org/{{org_id_delete}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"org",
+						"{{org_id_delete}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Organization",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"PyLadiesMed\",\n    \"description\": \"Somos muy tesas\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/org/{{org_id_update}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"org",
+						"{{org_id_update}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Consultant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/consultant/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"consultant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Consultant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Luna\",\n    \"birthday\": \"2020-06-30\",\n    \"organization\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/consultant/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"consultant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Consultant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/consultant/{{consult_id_delete}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"consultant",
+						"{{consult_id_delete}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Consultant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 2,\n        \"name\": \"Luna Sol\",\n        \"birthday\": \"2020-06-30\",\n        \"organization\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/consultant/{{consult_id_update}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"consultant",
+						"{{consult_id_update}}",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4796cf72-e7d7-4cf0-bf20-9f38b8d73b0d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "961812f6-86bc-492d-9757-d499cb577b24",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "3a2b929d-3a8f-4176-a2db-dbaaf01d8531",
+			"key": "org_id_delete",
+			"value": "2"
+		},
+		{
+			"id": "b516dddc-51ff-4350-812d-5111d5203bf8",
+			"key": "org_id_update",
+			"value": "1"
+		},
+		{
+			"id": "a006857c-4c86-498b-b2b8-83c7fb0e9dd2",
+			"key": "consult_id_delete",
+			"value": "1"
+		},
+		{
+			"id": "63cbd50a-3405-48bc-ab55-f574ee394c5b",
+			"key": "consult_id_update",
+			"value": "2"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
