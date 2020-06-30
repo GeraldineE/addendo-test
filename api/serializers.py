@@ -12,5 +12,4 @@ class ConsultantSerializer(ModelSerializer):
     class Meta:
         model = Consultant
         fields = "__all__"
-        depth = 1
 

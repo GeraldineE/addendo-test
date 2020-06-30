@@ -14,7 +14,7 @@ class Organization(models.Model):
 
 class Consultant(models.Model):
     name = models.CharField(max_length=100)
-    brithday = models.DateField()
+    birthday = models.DateField()
     organization = models.ForeignKey(
         Organization, on_delete=models.CASCADE, related_name="consultants"
     )
